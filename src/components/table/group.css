@@ -1,28 +1,28 @@
 .group-sticky-cols {
-    display: grid;
-    grid-template-columns: 15px 20px minmax(50px, 400px) 50px;
+    display: flex;
+    /* grid-template-columns: 15px 20px minmax(50px, 400px) 50px; */
     align-items: center;
     position: sticky;
     left: 0;
-    flex-shrink: 0;
-    min-width: 300px;
     background-color: white;
 }
 
 .group-sticky-indicator {
-    grid-column: 1;
+    /* grid-column: 1; */
 }
 
 .group-sticky-checkbox {
-    grid-column: 2;
+    /* grid-column: 2; */
 }
 
 .group-sticky-title {
-    grid-column: 3;
+    /* grid-column: 3; */
+    flex-basis: 300px;
+    width: 300px;
 }
 
 .group-sticky-details {
-    grid-column: 4;
+    /* grid-column: 4; */
 }
 
 .group-scrollable-row {
@@ -35,7 +35,9 @@
 }
 
 .group-column {
-    padding: .5rem 6rem;
+    padding: .5rem 3rem;
+    width: 100px;
+    flex-basis: 100px;
 }
 
 .group-header {
