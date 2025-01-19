@@ -36,8 +36,8 @@
 
 .group-column {
     padding: .5rem 3rem;
-    width: 100px;
-    flex-basis: 100px;
+    width: 350px;
+    flex-basis: 350px;
 }
 
 .group-header {
