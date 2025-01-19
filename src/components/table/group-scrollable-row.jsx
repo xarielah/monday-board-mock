@@ -1,11 +1,11 @@
-import GroupColumn from "./grou-column";
+import GroupColumn from "./group-column";
 
-const GroupScrollableRow = ({ row: task, cols }) => {
-    console.log("🚀 ~ GroupScrollableRow ~ cols:", cols)
-    console.log("🚀 ~ GroupScrollableRow ~ task:", task)
+const GroupScrollableRow = ({ row: task, cols, isHeaders }) => {
     return (
         <section className="group-scrollable-row">
-            {cols.map(col => <GroupColumn column={col} value={task[col]} key={col} />)}
+
+            {!isHeaders && cols.map(col => <GroupColumn column={col} value={task[col]} key={col} />)}
+            {isHeaders && cols.map(col => <GroupColumn isHeader column={col} key={col} />)}
         </section>
     );
 }

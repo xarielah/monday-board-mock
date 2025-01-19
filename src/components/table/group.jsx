@@ -4,11 +4,11 @@ import GroupHeader from "./group-header";
 import "./group.css";
 
 const Group = ({ group }) => {
-    console.log("🚀 ~ Group ~ group:", group)
+    const cols = Object.keys(group.tasks[0]).filter(key => key !== "id" && key !== "taskTitle");
     return (
         <div className="group">
             <GroupHeader groupName={"Group #" + group.id} />
-            <GroupContent rows={group.tasks} />
+            <GroupContent rows={group.tasks} cols={cols} />
             <GroupFooter onAddTask={(taskName) => console.log("Adding Task: " + taskName)} />
         </div>
     );
